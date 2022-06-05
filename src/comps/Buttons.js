@@ -1,22 +1,50 @@
-import Button from './Button'
-import React from 'react'
+import React, {useState} from 'react'
 import countries from './countries'
 
-const Buttons = () => {
+export const Buttons = () => {
+    const [content, setContent] = useState("");
+    const [showContent, setShowContent] = useState(false);
+
     return (
-        <div style={{
-            display: 'flex',
-            flexWrap: 'wrap'
-        }}>
-            {countries.map((country)=> (
-                <Button 
-                    key={country.id} 
-                    content={country.props.content} 
-                    backgroundImg={country.props.url}
-                />
-            ))}
+        <div>
+            <div>
+                <div style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        width: '100%'
+                }}>
+                    {countries.map((country) => {
+                        return (
+                            <div 
+                                key={country.id}
+                                style={{
+                                backgroundImage: `url(${country.props.url})`,
+                                backgroundSize: 'cover',
+                                height: '200px',
+                                width: "33%"
+                            }}>
+                                <button
+                                    key={country.id}
+                                    onClick={() => {
+                                        setShowContent(true);
+                                        content !== country.props.content
+                                            ? setContent(country.props.content)
+                                            : setShowContent(!showContent);
+                                    }}
+                                >
+                                Pokaż {country.id}
+                                </button>
+                            </div>
+                        );
+                    })}
+                </div>
+            
+            </div>
+            <div>
+                {showContent ? <div>{content}</div> : null}
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default Buttons
