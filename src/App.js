@@ -1,8 +1,6 @@
-import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import ButtonBases from './components/ButtonBases';
+import './App.scss';
 import Buttons from './comps/Buttons';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

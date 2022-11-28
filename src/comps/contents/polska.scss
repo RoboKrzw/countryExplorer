@@ -1,0 +1,254 @@
+@import "../../App.scss";
+
+
+.listOfLandscapes {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    color: rgb(43, 161, 73);
+    display: flex;
+    list-style: none;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+
+    &__slider {
+        height: 300px;
+        display: flex;
+        transition: transform 0.5s ease-out;
+        
+        &__item {
+            height: 30vh;
+            position: relative;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &__button {
+                position: absolute;
+                left: 50%; 
+                transform: translate(-50%, 50%);
+                top: 0;
+                // height: 200px;
+                // width: 100%;
+                // border: none;
+                // background: none;
+            }
+            
+            &__bcg {
+                opacity: 0.2;
+                width: 100vw;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                @include for-phone-only() {
+                    bottom: 0;
+                }
+
+                @include for-desktop-up {
+                    bottom: -80px;
+                }
+
+                @include for-big-desktop-up {
+                    bottom: -280px;
+                }
+            }
+        }
+    }
+    &__arrow {
+        width: 70px;
+        height: auto;
+        position: absolute;
+        top: 100px;
+        cursor: pointer;
+
+        @include for-phone-only() {
+            width: 35px;
+        }
+
+        &.left {
+            left: 100px;
+
+            @include for-phone-only() {
+                top: 30px;
+                left: 20px;
+            }
+        }
+
+        &.right {
+            right: 100px;
+
+            @include for-phone-only() {
+                top: 30px;
+                right: 20px;
+            }
+        }
+    }
+}
+
+.cls-polska1{fill:#f6f6f6;}.cls-polska2{fill:#cf2222;}.cls-polska3{fill:#fefefe;}.cls-4{fill:#e51212;}
+
+.goralButtonColors1{fill:#202323}.goralButtonColors2{fill:#6b655f}.goralButtonColors3{fill:#8bb4c5}
+
+.riverButtonColors1{fill:#76850f}.riverButtonColors2{fill:#b5c6c5}.riverButtonColors3{fill:#f1f3f1}.polskakonturred{fill:#ff494e}
+
+.cls-castle1{fill:#8d7563;}.cls-castle2{fill:#4e5052;}.cls-castle3{fill:#2e2b1e;}.cls-castle4{fill:#96a7bd;}.cls-castle5{fill:#e0e2e9;}.cls-castle6{fill:#bdcbda;}
+
+.cls-lake1{fill:#7198c0;}.cls-lake2{fill:#333f3c;}.cls-lake3{fill:#bbdffa;}
+
+.landscapeBox {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+    
+    &__contour {
+        width: auto;
+        max-width: 806px;
+        position: relative;
+        margin: auto;
+        z-index: 5;
+
+        @include for-large-phone {            
+            height: 89vw;
+        }
+
+        &__rivers {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 10;
+            visibility: hidden;
+    
+            &.visible {
+                opacity: 1;
+                visibility: initial;
+            }
+        }
+    
+        &__mountains {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 10;
+            visibility: hidden;
+
+            &.visible {
+                opacity: 1;
+                visibility: initial;
+            }
+        }
+
+        &__lakes {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 10;
+            visibility: hidden;
+
+            &.visible {
+                opacity: 1;
+                visibility: initial;
+            }
+        }
+        
+        .cls {
+            stroke-miterlimit: 10;
+
+            &__rect {
+                fill: none;
+                stroke: none;
+                visibility: hidden;
+            }
+
+            &__wisla {
+                fill: none;
+                stroke: #33FFE0;
+                box-sizing: none;
+                stroke-width: 7px;
+            }
+
+            &__warta {
+                fill: none;
+                stroke: #3DBFAC;
+                box-sizing: none;
+                stroke-width: 7px;
+            }
+
+            &__odra {
+                fill: none;
+                stroke: #2A8D7E;
+                box-sizing: none;
+                stroke-width: 7px;
+            }
+
+            &__rysy {
+                fill:#7A1010;
+                stroke: none;
+                box-sizing: none;
+            }
+
+            &__sniezka {
+                fill:#7F0707;
+                stroke: none;
+                box-sizing: none;
+            }
+
+            &__tarnica {
+                fill:#7C1E1E;
+                stroke: none;
+                box-sizing: none;
+            }
+
+            &__jeziorak {
+                fill:#8cc1f6;
+                stroke: none;
+                box-sizing: none;
+            }
+
+            &__sniardwy {
+                fill:#9cc0f8;
+                stroke: none;
+                box-sizing: none;
+            }
+
+            &__lebsko {
+                fill:#6fc0f8;
+                stroke: none;
+                box-sizing: none;
+            }
+        }
+    }
+}
+
+        // &__polskaKontur {
+        //     position: absolute;
+        //     left: 50%;
+        //     transform: translate(-50%, 0);
+        //     // object-fit: contain;
+        //     // mix-blend-mode: screen;
+        //     // padding: 2rem;
+        //     max-width: 98%;
+        // }
+    
+        // &__polskaKrajobraz {
+        //     position: absolute;
+        //     left: 50%;
+        //     transform: translate(-50%, 0);
+        //     object-fit: contain;
+        //     mix-blend-mode: screen;
+        //     // padding: 2rem;
+        //     max-width: 98%;
+        //     overflow: hidden;
+        // }
+    
+        // &__polskaVideo {
+        //     position: absolute;
+        //     object-fit: contain;
+        //     mix-blend-mode: screen;
+        //     // padding: 2rem;
+        //     max-width: 92%;
+        //     justify-content: center;
+        //     overflow: hidden;
+        // }
