@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import countries from './countries'
 import './buttons.scss'
 import {Container} from 'react-bootstrap'
@@ -7,23 +7,30 @@ import classNames from 'classnames';
 export const Buttons = () => {
     const [content, setContent] = useState("");
     const [showContent, setShowContent] = useState(false);
-    // const [isFullHeight, setIsFullHeight] = useState(false);
+    const [isRow, setIsRow] = useState(false);
 
-    // const toggleHandler = (e) => {
-    //     setIsFullHeight(!isFullHeight);
-    // };
+    const handleButtonClick = () => {
+        setIsRow(!isRow);
+    };
+
+    useEffect(() => {
+        setShowContent(isRow);
+      }, [isRow]);
+    
+    const buttonClass = isRow ? 'wrapper__country-row' : 'wrapper__country';    
 
     return (
         <div className='wrapper'>
-            <div className='wrapper__country'>
+            <div className={buttonClass}>
                 {countries.map((country) => {
                     return (
                         <button
                             className='wrapper__country__button'
                             key={country.id}
                             onClick={() => {
+                                handleButtonClick();
                                 setShowContent(true);
-                                content !== country.props.content 
+                                content !== country.props.content
                                     ? setContent(country.props.content)
                                     : setShowContent(!showContent);
                             }}

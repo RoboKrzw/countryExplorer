@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Row, Col } from 'react-bootstrap'
-import Landscapes from './landscapes/Landscapes'
+import Landscapes from './landscapes-Polska/Landscapes'
 // import Tooltip from '@mui/material/Tooltip';
 
-import SvgRivers from './svgPolska/SvgRivers';
-import SvgMountains from './svgPolska/SvgMountains';
-import SvgLakes from './svgPolska/SvgLakes';
+import SvgRivers from './svg-Polska/SvgRivers';
+import SvgMountains from './svg-Polska/SvgMountains';
+import SvgLakes from './svg-Polska/SvgLakes';
 
 import './polska.scss'
 
