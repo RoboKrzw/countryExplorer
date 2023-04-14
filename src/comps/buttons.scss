@@ -29,10 +29,10 @@
                 transform: scale(1.02);
                 overflow: hidden !important;
     
-                @include for-tablet-landscape-down {
-                    transform: scale(1.02);
-                    overflow: hidden !important;
-                }
+                // @include for-tablet-landscape-down {
+                //     transform: scale(1.02);
+                //     overflow: hidden !important;
+                // }
             }
 
             &__bcg {

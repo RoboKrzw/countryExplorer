@@ -40,19 +40,19 @@ export const Polska = () => {
             <div className='listOfLandscapes__slider__item'>
               <SvgMountains />
               <button className='listOfLandscapes__slider__item__button' onClick={() => setMountainVisible(!mountainVisible)}>
-                  pokaż lub schowaj góry
+                show/hide mountains
               </button>
             </div>
             <div className='listOfLandscapes__slider__item'>
               <SvgRivers />
               <button className='listOfLandscapes__slider__item__button' onClick={() => setRiverVisible(!riverVisible)}>
-                  pokaż lub schowaj rzeki
+                show/hide rivers
               </button>
             </div>
             <div className='listOfLandscapes__slider__item'>
               <SvgLakes />
               <button className='listOfLandscapes__slider__item__button' onClick={() => setLakeVisible(!lakeVisible)}>
-                  pokaż lub schowaj jeziora
+                show/hide lakes
               </button>
             {console.log(riverVisible)}
             </div>
