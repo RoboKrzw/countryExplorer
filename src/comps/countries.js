@@ -19,25 +19,26 @@ const countries = [
           content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum."
         }
     }
-    // ,
-    // {
-    //     id: 3,
-    //     props:
-    //     {
-    //       url: '/images/slovakia.jpg',
-    //       title: 'Slovakia',
-    //       content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000."
-    //     }
-    // },
-    // {
-    //     id: 4,
-    //     props:
-    //     {
-    //       url: '/images/hungary.jpg',
-    //       title: 'Hungary',
-    //       content: "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words"
-    //     }
-    // }
+    ,
+    {
+        id: 3,
+        props:
+        {
+          url: '/images/panoramaButtons/italiaPanorama.png',
+          title: 'Italia',
+          content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000."
+        }
+    }
+    ,
+    {
+        id: 4,
+        props:
+        {
+          url: '/images/panoramaButtons/spainPanorama.png',
+          title: 'Spain',
+          content: "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words"
+        }
+    }
     // ,
     // {
     //     id: 5,
